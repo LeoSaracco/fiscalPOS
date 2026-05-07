@@ -3,6 +3,7 @@ import { VentasProvider } from './context/VentasContext';
 import { UIProvider } from './context/UIContext';
 import { ConfigProvider } from './context/ConfigContext';
 import TopBar from './components/Layout/TopBar';
+import BottomNav from './components/Layout/BottomNav';
 import PosPanel from './components/POS/PosPanel';
 import Dashboard from './components/Dashboard/Dashboard';
 import ProductosPanel from './components/Productos/ProductosPanel';
@@ -26,7 +27,7 @@ function MainContent() {
   const { state: ventasState, cierreZ } = useVentas();
 
   return (
-    <main className="flex-1 p-4 max-w-[1400px] w-full mx-auto">
+    <main className="flex-1 p-4 pb-20 lg:pb-4 max-w-[1400px] w-full mx-auto">
       <div className={`section ${activeTab === 'dashboard' ? 'block' : 'hidden'}`}>
         <Dashboard />
       </div>
@@ -90,6 +91,7 @@ function App() {
             <div className="min-h-screen bg-bg text-text flex flex-col">
               <TopBar />
               <MainContent />
+              <BottomNav />
             </div>
           </UIProvider>
         </VentasProvider>

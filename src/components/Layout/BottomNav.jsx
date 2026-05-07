@@ -1,19 +1,15 @@
 import { useUI } from '../../context/UIContext';
 
+export default function BottomNav() {
+  const { activeTab, setActiveTab } = useUI();
+
   const tabs = [
     { id: 'pos', icon: '🧾', label: 'POS' },
-    { id: 'productos', icon: '📦', label: 'Productos' },
-    { id: 'stock', icon: '📊', label: 'Stock' },
-    { id: 'ventas', icon: '🧾', label: 'Ventas' },
+    { id: 'productos', icon: '📦', label: 'Prod' },
+    { id: 'ventas', icon: '📋', label: 'Ventas' },
     { id: 'caja', icon: '💰', label: 'Caja' },
-    { id: 'notascredito', icon: '📝', label: 'NC' },
-    { id: 'importar', icon: '📥', label: 'Importar' },
-    { id: 'fiscal', icon: '🏛️', label: 'Fiscal' },
     { id: 'config', icon: '⚙️', label: 'Config' },
   ];
-
-function BottomNav() {
-  const { activeTab, setActiveTab } = useUI();
 
   return (
     <nav className="bottom-nav">
@@ -34,5 +30,3 @@ function BottomNav() {
     </nav>
   );
 }
-
-export default BottomNav;

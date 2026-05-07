@@ -361,6 +361,12 @@ textarea:focus {
   transform: scale(1.1);
 }
 
+@media (min-width: 1024px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
 /* Section animation */
 .section {
   animation: fadeIn 0.3s ease;
@@ -491,7 +497,7 @@ tr:hover td {
 }
 
 .printer-top {
-  width: 258px;
+  width: min(258px, calc(100vw - 32px));
   background: linear-gradient(180deg, #3c3c3c, #2d2d2d);
   border-radius: 12px 12px 0 0; padding: 11px 16px 0;
   display: flex; flex-direction: column; align-items: center; gap: 7px;
@@ -516,12 +522,12 @@ tr:hover td {
 }
 
 .printer-slot {
-  width: 196px; height: 5px; background: #111; border-radius: 2px;
+  width: min(196px, calc(100vw - 100px)); height: 5px; background: #111; border-radius: 2px;
   margin-bottom: 4px; box-shadow: inset 0 1px 4px rgba(0,0,0,.9);
 }
 
 .ticket {
-  width: 226px; background: #fefcf7; padding: 14px 13px 18px;
+  width: min(226px, calc(100vw - 48px)); background: #fefcf7; padding: 14px 13px 18px;
   font-family: 'Courier New', monospace; color: #111; font-size: 8.5px; line-height: 1.65;
   overflow-y: auto; max-height: 62vh;
   box-shadow: 2px 0 8px rgba(0,0,0,.2), -2px 0 8px rgba(0,0,0,.15);
@@ -531,7 +537,7 @@ tr:hover td {
 .ticket::-webkit-scrollbar-thumb { background: #ccc; }
 
 .ticket-cut {
-  width: 226px; height: 12px; flex-shrink: 0;
+  width: min(226px, calc(100vw - 48px)); height: 12px; flex-shrink: 0;
   background:
     radial-gradient(circle at 6px 0, transparent 5px, #fefcf7 5px) 0 0 / 12px 12px,
     radial-gradient(circle at 6px 12px, #0a0c14 5px, transparent 5px) 0 0 / 12px 12px;
@@ -539,7 +545,7 @@ tr:hover td {
 }
 
 .printer-bottom {
-  width: 258px; background: linear-gradient(180deg, #2d2d2d, #222);
+  width: min(258px, calc(100vw - 32px)); background: linear-gradient(180deg, #2d2d2d, #222);
   border-radius: 0 0 10px 10px; padding: 9px 16px 13px;
   display: flex; gap: 6px; flex-shrink: 0;
   box-shadow: 0 8px 24px rgba(0,0,0,.5);

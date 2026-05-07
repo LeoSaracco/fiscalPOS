@@ -26,8 +26,8 @@ export default function ItemRow({ item, idx }) {
         </button>
       </div>
 
-      <div className="min-w-[70px] text-right text-text-secondary flex-shrink-0">{fmt(item.precio)}</div>
-      <div className="min-w-[70px] text-right font-bold flex-shrink-0">{fmt(item.precio * item.cantidad)}</div>
+      <div className="min-w-[50px] sm:min-w-[70px] text-right text-text-secondary flex-shrink-0">{fmt(item.precio)}</div>
+      <div className="min-w-[50px] sm:min-w-[70px] text-right font-bold flex-shrink-0">{fmt(item.precio * item.cantidad)}</div>
 
       <button
         onClick={() => removeItem(idx)}

@@ -217,6 +217,7 @@ export default function ImportarPanel() {
         <div>
           <div className="card text-sm leading-relaxed">
             <div className="font-bold mb-2">Formato esperado</div>
+            <div className="overflow-x-auto">
             <table className="w-full text-xs">
               <thead>
                 <tr>
@@ -244,6 +245,7 @@ export default function ImportarPanel() {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       </div>

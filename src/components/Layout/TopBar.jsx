@@ -1,4 +1,5 @@
 import { useUI } from '../../context/UIContext';
+import { useClock } from '../../hooks/useClock';
 
 const iconMap = {
   dashboard: '📊',
@@ -17,6 +18,7 @@ const iconMap = {
 
 export default function TopBar() {
   const { activeTab, setActiveTab } = useUI();
+  const time = useClock();
   
   const tabs = [
     { id: 'dashboard', label: 'Dashboard' },
@@ -52,9 +54,7 @@ export default function TopBar() {
       </div>
       <div className="topbar-info flex items-center gap-3 flex-shrink-0">
         <span className="badge badge-green text-xs">v1.0.0</span>
-        <span className="topbar-clock text-sm">
-          {new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' })}
-        </span>
+        <span className="topbar-clock text-sm">{time}</span>
       </div>
     </header>
   );

@@ -7,7 +7,7 @@ export default function MappingPanel({ headers, mapping, onChange, campos }) {
     <div>
       {headers.map((h, i) => (
         <div key={i} className="flex items-center gap-2 mb-1.5 text-sm">
-          <span className="min-w-[120px] text-muted">{String(h)} →</span>
+          <span className="min-w-[80px] sm:min-w-[120px] text-muted">{String(h)} →</span>
           <select
             value={mapping[i] || ''}
             onChange={e => handleChange(i, e.target.value)}

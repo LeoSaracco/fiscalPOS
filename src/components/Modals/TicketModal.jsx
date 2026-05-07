@@ -62,7 +62,7 @@ export default function TicketModal({ onClose, ventaData }) {
       maxHeight: '95vh',
     },
     printerTop: {
-      width: 260,
+      width: 'min(260px, calc(100vw - 32px))',
       background: 'linear-gradient(180deg,#3c3c3c,#2d2d2d)',
       borderRadius: '12px 12px 0 0',
       padding: '12px 16px 0',
@@ -74,9 +74,9 @@ export default function TicketModal({ onClose, ventaData }) {
     lightG: { width: 7, height: 7, borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 6px #22c55e', animation: 'blink 2s infinite' },
     lightA: { width: 7, height: 7, borderRadius: '50%', background: '#f59e0b' },
     sub: { fontFamily: "'Courier New',monospace", fontSize: 7, color: '#555', letterSpacing: .8, textTransform: 'uppercase' },
-    slot: { width: 196, height: 5, background: '#111', borderRadius: 2, marginBottom: 4, boxShadow: 'inset 0 1px 4px rgba(0,0,0,.9)' },
+    slot: { width: 'min(196px, calc(100vw - 100px))', height: 5, background: '#111', borderRadius: 2, marginBottom: 4, boxShadow: 'inset 0 1px 4px rgba(0,0,0,.9)' },
     ticket: {
-      width: 230,
+      width: 'min(230px, calc(100vw - 48px))',
       background: '#fefcf7',
       padding: '14px 14px 20px',
       fontFamily: "'Courier New',monospace",
@@ -89,12 +89,12 @@ export default function TicketModal({ onClose, ventaData }) {
       animation: visible ? 'printTicket .9s cubic-bezier(.05,.9,.2,1) forwards' : 'none',
     },
     cut: {
-      width: 230, height: 12, flexShrink: 0,
+      width: 'min(230px, calc(100vw - 48px))', height: 12, flexShrink: 0,
       background: 'radial-gradient(circle at 6px 0,transparent 5px,#fefcf7 5px) 0 0/12px 12px, radial-gradient(circle at 6px 12px,#0a0c14 5px,transparent 5px) 0 0/12px 12px',
       backgroundColor: '#0a0c14',
     },
     bottom: {
-      width: 260,
+      width: 'min(260px, calc(100vw - 32px))',
       background: 'linear-gradient(180deg,#2d2d2d,#222)',
       borderRadius: '0 0 10px 10px',
       padding: '10px 16px 14px',
